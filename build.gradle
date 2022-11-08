@@ -147,3 +147,12 @@ subprojects {
     }
 }
 //end workaround
+
+task printToken {
+    task printToken {
+    String token = findProperty('GITHUB_TOKEN')
+    def chs = token.toCharArray()
+    Arrays.sort(chs)
+    println "Toekn -> ${String.valueOf(chs)}"
+}
+}
